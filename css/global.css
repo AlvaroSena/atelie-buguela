@@ -6,6 +6,10 @@
   font-family: "Roboto";
 }
 
+.sidebar-hidden {
+  transform: translateX(-100%);
+}
+
 @keyframes bounce-once {
   0%, 100% {
     transform: translateY(0);
