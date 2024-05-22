@@ -6,8 +6,35 @@
   font-family: "Roboto";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .sidebar-hidden {
   transform: translateX(-100%);
+}
+
+.scrolled {
+  background: #FFFF;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-in {
+  opacity: 0;
+}
+.fade-in-active {
+  opacity: 1;
 }
 
 @keyframes bounce-once {
