@@ -42,13 +42,12 @@
       </button>
 
       <nav class="hidden md:flex flex-row items-center gap-[12px]">
-        <a class="text-zinc-950 font-semibold relative inline-block leading-[80px]" href="/">
+        <a id="home-link" class="text-zinc-950 font-semibold active:text-orange-500 leading-[80px]" href="/">
           Início 
-          <div class="h-[3px] w-full absolute bottom-0 left-0 bg-orange-500 rounded-tl-[3px] rounded-tr-[3px]"></div>
         </a>
-        <a class="text-zinc-950 relative inline-block leading-[80px]" href="#produtos">Produtos</a>
-        <a class="text-zinc-950 relative inline-block leading-[80px]" href="#quem-somos">Quem somos?</a>
-        <a class="text-zinc-950 relative inline-block leading-[80px]" href="#contato">Contato</a>
+        <a id="products-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#produtos">Produtos</a>
+        <a id="about-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#quem-somos">Quem somos?</a>
+        <a id="contact-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#contato">Contato</a>
       </nav>
     </div>
   </header>
@@ -210,12 +209,89 @@
   </main>
 
   <footer class="mt-[200px] bg-zinc-900">
-    <div class="py-8 max-w-[1120px] mx-auto">
-      <h3 class="text-white text-3xl">Atêlie Buguela</h3>
+    <div class="py-8 px-4 md:px-0 max-w-[1120px] mx-auto flex flex-col gap-10">
+      <div class="flex flex-col gap-8 md:gap-0 md:flex-row justify-between">
+        <div class="md:max-w-[50%]">
+          <h2 class="text-white text-3xl mb-4">Atêlie Buguela</h2>
+          <p class="text-white text-sm">
+            Transformando tradições em arte, nosso ateliê é um espaço dedicado à valorização e celebração da cultura afro-brasileira. Cada peça é criada com amor, respeito e inspiração nas nossas raízes ancestrais.
+          </p>
+        </div>
+        <div class="md:max-w-[50%]">
+          <h3 class="text-xl text-white mb-4 font-semibold">Contato</h3>
+          <p class="text-white">
+            Email: <span class="text-zinc-400">contato@buguelaatelie.com.br</span>
+          </p>
+          <p class="text-white">
+            Telefone: <span class="text-zinc-400">(11) 99000-0000</span>
+          </p>
+          <p class="text-white">
+            Endereço: <span class="text-zinc-400">Rua Fulano de Tal, 01, São Paulo, SP</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-row items-center justify-center gap-4">
+        <a href="" class="bg-white rounded-full size-[40px] flex items-center justify-center hover:bg-zinc-200 transition">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="20" height="20" fill="url(#pattern0_14_101)"/>
+            <defs>
+            <pattern id="pattern0_14_101" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_14_101" transform="scale(0.03125)"/>
+            </pattern>
+            <image id="image0_14_101" width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFuSURBVFiF7ZQxS8NQFIXPzcvQ4GKRoruzOAkiLoKTuBoHaQsFiYOLOLr7IxwSSAdpROkiTgrq2MV/4OKkQwY3Y3tcFGJNUvJMyZK7BM5975yP9+6L4B9FUrrdYJuUPQCrAOYB1ACEAEYA3kRw0GrZ92kepm646wYN37/oAbKR0K5/f+dImc3y0QLwPK+mFK5JrOjsj5ehs0mpmeMiwrUASAqJwyLCAY0r8P3LJQALKe07EV4BxuuPEEWfg0IBgNFikiqCQbO5sykizOOmMQOsJ6rEbd5wLQARqOQO3/N6aQEUXaUDSFbTdYOGUlz+tUGMLZJHCVYuMDofVy1LHmzb/kjLyHwFSskagH5cI9PmjB1AOmPiMAxDKytj2lfw4jhOVBqACJ4nrZkqAMlyAYDJJ5A5hKZpPEXR0IlrIlgH0BxfS6IP4CauGQYfJwFkPsOk8v3ePilnfzs8abd3T/P6lf4jqgAqgAqgAqgAKoAvBERlxrA7sFcAAAAASUVORK5CYII="/>
+            </defs>
+          </svg>
+        </a>
+        <a href="" class="bg-white rounded-full size-[40px] flex items-center justify-center hover:bg-zinc-200 transition">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="20" height="20" fill="url(#pattern0_14_102)"/>
+            <defs>
+            <pattern id="pattern0_14_102" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_14_102" transform="scale(0.03125)"/>
+            </pattern>
+            <image id="image0_14_102" width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQ9SURBVFiFtZdPaBVHHMc/v9nYaGr8c6oRGl/IoU2CioeCpSdrI9YWi6VZLcT3ggl9aLSUIPT67qXYRh8YiOZlUaSrlaqoNHrswVsN2KSXkKA05qSgCRv/7P56eLN2+5r4Xnjp97I7M9+Z73dn5vebWaEEhcKlNgh7RKQdSAFvlnKWiDlgSkRGjNHBzk53LNko8Yvv+28EAd8DhwGnStHFEIpIPggeHc9msy9eGbDi14GPEuSHwO/2C6rBamAbsCGuUOXWs2ePP8lmsy9qAOyXx+LTxmjvxMT41VwuF1UpDkAulzNNTa2fAXmgQYT2lSvXfwd8I4XCpTaRaJTitE+HYbj90KEvHyyHcCk8z29U5Q7QALwUibbUQNgD4gAYo72ZzPKJDw//tANMp2o0Wlcnedd17w8P+73AZaBG1fTUgOyy/OmJifGryyU+NHQhBXITtFZECAJR4OTk5NiVpqbWGYp7YpcRodH2GV2uNQdwHPMOUBuXVXUrgNUYtdWbaijuUoDZSgYeGvI3O470qOpOinkCYAq4LRINptMH7hWrnv0GK8eBFmAe1EsM88Q+62sq/aL+/hu169bNnlAlq6qmpLkNaFM1RwuFi6fr6rTPdd05z/Pei6JVHxijf2Yy++8vNG5FBvr7b9SuXTt7U5Udieo4Twj/xLkjor1BQIvv+x+7rjsHjLxu7IoMrFkz9wO8Ev9LlSOZTMc1EVEoxnlzc8veKJI8sBH40OaWY+XGLp3K/2BoyN8sol/F4mEYvt/V5V6Nxa2B6ODB/b+EYbgdmLbVh4vnSpUGjKE75qly5HVJyrYdtUXHGO2u2oAq7fZ1OpPpuFaOPzk5dgWYKfbV9jL08gaSeSI57YuhNM6rNgCoNSLliAnE3LKGK1mCB/a5NZfLleVbzhZbXDD2l2RAhFv2taG5uWVvOX4q1bIPe/aLyK0y9EoMRINACBBFkj979sLbi3E9z28UkZO2GBqjg1UbSKcP3FOV07a40XGcO8PD/r7kcuRyOeN5Fz9PnPWISL70/rcQKsqEdXXaFwS8C+ykmOkuNzW1zniefxcgitimqm8lutwOgkfHKxm7kijAdd3nq1axBziFXQ5ggyq7VdktQiweikj//PzjPfGlsxwqPg1d130OHCsULp02RrttkknZ5ilgxHE409nZUXbaSw08BepFqK+kQ1fXF38AfUsRWQBr7fOJwcZqpXFeLUrzhBGR+LxusFfn/xXJPKGqvxobq/HGynue37ho7ypx/vzPm0TklC2+VHUGBcDzLv6oql/bhodA7+Tk2JXl/DFJpVr2WfE4S55Ipzv6BGBgYGBFbe366yIkj88ZEe6q8rQacRHqo4htiVAFGJmff/xpNpt98eqEGxgYWGF/l3pZQnguES9F5GQQPPr2Xz+nSZw757eGId3ALopxvrqUs0TMAlPFDadn0ukD48nGvwFoEaRl1zcuUQAAAABJRU5ErkJggg=="/>
+            </defs>
+          </svg>            
+        </a>
+        <a href="" class="bg-white rounded-full size-[40px] flex items-center justify-center hover:bg-zinc-200 transition">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="20" height="20" fill="url(#pattern0_14_103)"/>
+            <defs>
+            <pattern id="pattern0_14_103" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_14_103" transform="scale(0.0416667)"/>
+            </pattern>
+            <image id="image0_14_103" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPgSURBVEiJpZVdbBRVGIafb3YXbARNjG0CsQ1NvOmFEC78jQnWKDb8XFjYKTTtzO4WWiCmiZhqJCQ0hjSpEqMYtZUu250utTtbitRQE7jxhwQSoyk23KixFyYYKUYxobulu/N5sV2o7XZFeJO5mPfMPO/3nTlnjvT3u60i9FJEqtITCgX3FhtbSo6T7FKVN0GO2Haww7Dt4DFgbG58AKQ7fzEuom2xmFt3p/B4PBnJwxmZnLz8BoDkU0cqVLMTwA+WFdwoIuo4brUq48AN8D9m2/V/lK7c3aDKWWBCJLPBsqwbAAaAZdVfBfYALzhOqj3vmZOgrwKrIPtJafhQjSqngCuBQHZzAX6rg9stpgZB6z2Px8NhcyLvuS4QBHbYtplcCB8cHHx4dtZ/ESj3PJ4tvFeQMf/G8/z7gKuGgeO67jKAQCC7D/gN6EkkTj4y/3nXdctmZ/2fA1WGwfaF8EUB4fDLfxkGLcC6dFreAmhsbLymKiHgwWw2d1xVBaCzs9NIp0kAT4loe3Ozea7Y9BkLjeZm85wIPaAdsVjqOYBQKHhWhB4RXnSc4VaANWtq3gbqQbosq6GnGBwWfIOCHMe5X/W+ccDv891c19TU9Pec9z2wGuQo6AEgaVnBnSKiSwUs6gBgbhVYQGUut/xowVOlEVgOekCEbzOZskgp+JIBALZtXgDeAbX7+5PbAEIh8zsRDgN4noy2tW2dLgUvGQBQVsYh4JKI9Eajn64GqKws7wIuiOjBeHx47T0FmKZ5EwwLWOH3+46rqtTW1mYNAwuYBe/Wcr6rgHwX3mXgEvCS4wy/AtDcbP4sovuBdZmMdt5TQCYj7wJPANdAux1nqAbAshqOAaOq8vrAQOqZuwqIx1NtqtoOJHM535NAVtU4UZiWXI5dwJSqDkSjp1f+rwDHSW4C/VCVb65fX2FHItt+AekA1qfTcgggEjGnPI+wKtWBwEx3MU7RjRaPD68H72vg91yOpyMRc+r2mHsGqBPhecsyv8oX4/aqshtks20HvyjZQX45eqPADHib5sMBstncbuBPVWKJROKBvJvZD/wE2tfX5z60ZEA0enql3+8bAyo8T7bb9o4fFxbQ0rLzioi0AtW5XOA9+NcuLw8E+KBogOu6Pp9v5gSwFrQlHA5+WWz68sDgiKoOgYQdJxWE/C4H7QIa43G3YVHA9LS8L8JW0IO23ZBYCl6Q6rK9wK+q+tHAwMlVAFVVFYeBi8w7O+bO5NRrqnoENGbbDZH/ghcUi7l1hsGYKudF9Myc/SjILmDMsoJbJB5PbQH9DDhfVsbG/O/hztXfn/pYRPcU75K2fwCZV6vzASJa8gAAAABJRU5ErkJggg=="/>
+            </defs>
+          </svg>            
+        </a>
+      </div>
+
+      <div class="w-full">
+        <div class="w-full bg-zinc-400 h-[1px] mb-4"></div>
+        <p class="text-zinc-400 font-semibold text-sm">
+          CopyRights | Buguela Atêlie
+        </p>
+      </div>
     </div>
   </footer>
 
   <script>
+    document.addEventListener('click', () => {
+      let pathname = window.location.href
+      const homeLink = document.getElementById('home-link')
+      const productsLink = document.getElementById('products-link')
+      const aboutLink = document.getElementById('about-link')
+      const contactLink = document.getElementById('contact-link')
+
+      console.log(pathname)
+
+      // switch(pathname) {
+      //   case ''
+      // }
+
+    })
+
+
     document.addEventListener('DOMContentLoaded', () => {
         const carouselInner = document.querySelector('.carousel-inner');
         const carouselItems = document.querySelectorAll('.carousel-item');
@@ -261,7 +337,6 @@
       const header = document.getElementById('main-header')
       if (window.scrollY > 0) {
         header.classList.add('bg-white')
-        console.log(header.classList)
       } else {
         header.classList.remove('bg-white')
       }
