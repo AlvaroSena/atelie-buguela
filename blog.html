@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/global.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Blog</title>
+</head>
+<body>
+  <header id="main-header" class="w-full h-[80px] fixed z-20 transition">
+    <div id="sidebar" class="hidden transition fixed z-20 w-full h-screen bg-white p-4">
+      <div class="flex flex-row items-center justify-between">
+        <img class="size-[50px] " src="./assets/logo.png" alt="Logo Atelie Buguela">
+
+        <button onclick="closeSidebar()">
+          <svg class="size-6" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px">
+            <path d="M 39.486328 6.9785156 A 1.50015 1.50015 0 0 0 38.439453 7.4394531 L 24 21.878906 L 9.5605469 7.4394531 A 1.50015 1.50015 0 0 0 8.484375 6.984375 A 1.50015 1.50015 0 0 0 7.4394531 9.5605469 L 21.878906 24 L 7.4394531 38.439453 A 1.50015 1.50015 0 1 0 9.5605469 40.560547 L 24 26.121094 L 38.439453 40.560547 A 1.50015 1.50015 0 1 0 40.560547 38.439453 L 26.121094 24 L 40.560547 9.5605469 A 1.50015 1.50015 0 0 0 39.486328 6.9785156 z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mt-8"> 
+        <nav class="flex flex-col">
+          <a class="py-2 visited:text-orange-500 font-semibold" href="#main-header">Início</a>
+          <a class="py-2 text-zinc-950" href="#produtos">Produtos</a>
+          <a class="py-2 text-zinc-950" href="#quem-somos">Quem somos?</a>
+          <a class="py-2 text-zinc-950" href="#contato">Contato</a>
+          <a class="py-2 text-zinc-950" href="/blog.html">Blog</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="max-w-[1120px] mx-4 md:mx-auto h-[80px] flex flex-row items-center gap-8">
+      <img class="size-[60px]" src="./assets/logo.png" alt="Logo Buguela Atelie">
+      <button class="md:hidden ml-auto" onclick="openSidebar()">
+        <svg class="size-8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px"><g fill="#000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)">
+          <path d="M5.5,9c-0.54095,-0.00765 -1.04412,0.27656 -1.31683,0.74381c-0.27271,0.46725 -0.27271,1.04514 0,1.51238c0.27271,0.46725 0.77588,0.75146 1.31683,0.74381h37c0.54095,0.00765 1.04412,-0.27656 1.31683,-0.74381c0.27271,-0.46725 0.27271,-1.04514 0,-1.51238c-0.27271,-0.46725 -0.77588,-0.75146 -1.31683,-0.74381zM5.5,22.5c-0.54095,-0.00765 -1.04412,0.27656 -1.31683,0.74381c-0.27271,0.46725 -0.27271,1.04514 0,1.51238c0.27271,0.46725 0.77588,0.75146 1.31683,0.74381h37c0.54095,0.00765 1.04412,-0.27656 1.31683,-0.74381c0.27271,-0.46725 0.27271,-1.04514 0,-1.51238c-0.27271,-0.46725 -0.77588,-0.75146 -1.31683,-0.74381zM5.5,36c-0.54095,-0.00765 -1.04412,0.27656 -1.31683,0.74381c-0.27271,0.46725 -0.27271,1.04514 0,1.51238c0.27271,0.46725 0.77588,0.75146 1.31683,0.74381h37c0.54095,0.00765 1.04412,-0.27656 1.31683,-0.74381c0.27271,-0.46725 0.27271,-1.04514 0,-1.51238c-0.27271,-0.46725 -0.77588,-0.75146 -1.31683,-0.74381z">
+          </path>
+        </g>
+        </g>
+      </svg>
+      </button>
+
+      <nav class="hidden md:flex flex-row items-center gap-[12px]">
+        <a id="home-link" class="text-zinc-950 font-semibold active:text-orange-500 leading-[80px]" href="/">
+          Início 
+        </a>
+        <a id="products-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#produtos">Produtos</a>
+        <a id="about-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#quem-somos">Quem somos?</a>
+        <a id="contact-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#contato">Contato</a>
+        <a id="contact-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="/blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <main class="max-w-[1120px] mx-4 md:mx-auto pt-[112px]">
+      <h1 class="text-2xl md:text-5xl font-bold text-center text-zinc-900">Últimas publicações</h1>
+
+      <div class="grid md:grid-cols-4 gap-8 mt-8">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img class="md:max-w-[250px]" src="./assets/image.png" alt="Imagem do post">
+          <p class="font-semibold text-zinc-600">21 de maio de 2024</p>
+          <h3 class="text-center text-zinc-800 font-semibold text-xl">Explorando as Raízes: Arte Afro no Ateliê</h3>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img class="md:max-w-[250px]" src="./assets/image.png" alt="Imagem do post">
+          <p class="font-semibold text-zinc-600">21 de maio de 2024</p>
+          <h3 class="text-center text-zinc-800 font-semibold text-xl">Explorando as Raízes: Arte Afro no Ateliê</h3>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img class="md:max-w-[250px]" src="./assets/image.png" alt="Imagem do post">
+          <p class="font-semibold text-zinc-600">21 de maio de 2024</p>
+          <h3 class="text-center text-zinc-800 font-semibold text-xl">Explorando as Raízes: Arte Afro no Ateliê</h3>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img class="md:max-w-[250px]" src="./assets/image.png" alt="Imagem do post">
+          <p class="font-semibold text-zinc-600">21 de maio de 2024</p>
+          <h3 class="text-center text-zinc-800 font-semibold text-xl">Explorando as Raízes: Arte Afro no Ateliê</h3>
+        </div>
+        
+      </div>
+    </main>
+  </section>
+
+  <script>
+    const publicKey = 'public_3e6b77c6-da02-458d-97f8-361b58aefe3f'
+    const apiURL = 'https://api-notionclient.cloud/v1'
+
+    const requestBody = {
+      publicKey,
+      query: {
+        property: "published", 
+        checkbox: {
+          equals: true,
+        }
+      }
+    }
+
+    async function getPosts() {
+      const response = await fetch(`${apiURL}/notion/database/query`, {
+        method: 'post',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      })
+
+      const data = await response.json()
+      return data
+    }
+
+    getPosts().then(data => console.log(data))
+
+
+  </script>
+</body>
+</html>
