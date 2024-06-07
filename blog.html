@@ -58,6 +58,7 @@
     <main class="max-w-[1120px] mx-4 md:mx-auto pt-[112px]">
       <h1 class="text-2xl md:text-5xl font-bold text-center text-zinc-900">Últimas publicações</h1>
 
+      <div id="loading"></div>
       <div id="posts" class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8"></div>
 
       <a href="" class="w-[76px] h-[76px] bg-[#25D366] fixed bottom-4 right-4 flex items-center justify-center rounded-full hover:bg-green-400 transition">
@@ -74,7 +75,8 @@
     </main>
   </section>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-  <script src="./js/posts.js"></script>
+  
+  <script src="./js/header.js"></script>
+  <script src="./js/pages/blog.js" type="module"></script>
 </body>
 </html>
