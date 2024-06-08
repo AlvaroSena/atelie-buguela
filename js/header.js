@@ -6,3 +6,17 @@ window.addEventListener('scroll', () => {
     header.classList.remove('bg-white')
   }
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('nav a')
+  let currentPath = window.location.pathname + window.location.hash
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.remove('text-zinc-950')
+      link.classList.add('text-orange-500', 'font-semibold')
+    } else {
+      link.classList.remove('text-orange-500', 'font-semibold')
+    }
+  })
+})

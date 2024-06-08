@@ -43,7 +43,7 @@
       </button>
 
       <nav class="hidden md:flex flex-row items-center gap-[12px]">
-        <a id="home-link" class="text-zinc-950 font-semibold active:text-orange-500 leading-[80px]" href="/">
+        <a id="home-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="/">
           Início 
         </a>
         <a id="products-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#produtos">Produtos</a>
@@ -82,7 +82,7 @@
       <div class="max-w-[1120px] mx-auto relative p-4 md:p-0">
         <h2 class="text-zinc-900 text-3xl font-bold">Produtos em destaque</h2>
 
-        <div class="hidden mt-8 md:grid grid-cols-3 gap-8">
+        <div class="hidden mt-8 md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-zinc-100 rounded-tl-lg rounded-tr-lg">
             <img class="rounded-tl-lg rounded-tr-lg" src="./assets/bolsa-1.png" alt="Bolsa 01">
             <div class="p-4">
@@ -198,11 +198,30 @@
           </p>
         </div>
 
-        <form action="" class="w-full md:w-[50%] flex flex-col gap-4">
-          <input type="email" placeholder="Email" class="p-2 rounded-md bg-white">
-          <input type="text" placeholder="Assunto" class="p-2 rounded-md bg-white">
-          <textarea name="message" class="p-2 rounded-md bg-white" placeholder="Escreva aqui"></textarea>
-          <button class="bg-transparent p-2 rounded-md text-white border-solid border-2 border-white transition hover:bg-white hover:text-orange-500 font-semibold">
+        <form action="https://api.staticforms.xyz/submit" method="post" class="w-full md:w-[50%] flex flex-col gap-4">
+          <input 
+            name="email"
+            type="email" 
+            placeholder="Email" 
+            class="p-2 rounded-md bg-white" 
+            required
+          >
+          <input 
+            name="subject"
+            type="text" 
+            placeholder="Assunto" 
+            class="p-2 rounded-md bg-white" 
+            required
+          >
+          <input type="hidden" name="replyTo" value="@">
+          <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/success.html">
+          <textarea name="message" class="resize-none p-2 rounded-md bg-white" placeholder="Escreva aqui" required></textarea>
+          <input type="text" name="honeypot" style="display:none">
+          <input type="hidden" name="accessKey" value="7c40e239-5ebd-4687-b4df-31a72e4da7c1">
+          <button 
+            type="submit"
+            class="bg-transparent p-2 rounded-md text-white border-solid border-2 border-white transition   hover:bg-white hover:text-orange-500 font-semibold"
+          >
             Enviar
           </button>
         </form>
@@ -214,7 +233,7 @@
     <div class="py-8 px-4 md:px-0 max-w-[1120px] mx-auto flex flex-col gap-10">
       <div class="flex flex-col gap-8 md:gap-0 md:flex-row justify-between">
         <div class="md:max-w-[50%]">
-          <h2 class="text-white text-3xl mb-4">Atêlie Buguela</h2>
+          <h2 class="text-white text-3xl mb-4">Buguela Ateliê</h2>
           <p class="text-white text-sm">
             Transformando tradições em arte, nosso ateliê é um espaço dedicado à valorização e celebração da cultura afro-brasileira. Cada peça é criada com amor, respeito e inspiração nas nossas raízes ancestrais.
           </p>
@@ -276,7 +295,10 @@
       </div>
     </div>
 
-    <a href="" class="w-[76px] h-[76px] bg-[#25D366] fixed bottom-4 right-4 flex items-center justify-center rounded-full hover:bg-green-400 transition">
+    <a href="" class="animate-bounce w-[76px] h-[76px] bg-[#25D366] fixed bottom-4 right-4 flex items-center justify-center rounded-full hover:bg-green-400 transition">
+      <div class="relative">
+        <div class="absolute ml-8 mt-[-38px] bg-red-600 text-white px-2 rounded-full">1</div>
+      </div>
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect width="40" height="40" fill="url(#pattern0_85_6)"/>
         <defs>
@@ -290,33 +312,14 @@
   </footer>
   <script src="./js/header.js"></script>
   <script src="./js/carousel.js"></script>
-
+  <script src="./js/sidebar.js"></script>
   <script>
-    document.addEventListener('click', () => {
-      let pathname = window.location.href
-      const homeLink = document.getElementById('home-link')
-      const productsLink = document.getElementById('products-link')
-      const aboutLink = document.getElementById('about-link')
-      const contactLink = document.getElementById('contact-link')
+        const btn = document.getElementById('menu-btn');
+        const sidebar = document.getElementById('sidebar');
 
-      console.log(pathname)
-
-      // switch(pathname) {
-      //   case ''
-      // }
-
-    })
-
-
-    const sidebar = document.getElementById('sidebar')
-
-    function closeSidebar() {
-      sidebar.classList.add('hidden')
-    }
-
-    function openSidebar() {
-      sidebar.classList.remove('hidden')
-    }
+        btn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
   </script>
 </body>
 </html>
