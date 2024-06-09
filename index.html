@@ -42,15 +42,7 @@
       </svg>
       </button>
 
-      <nav class="hidden md:flex flex-row items-center gap-[12px]">
-        <a id="home-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="/">
-          Início 
-        </a>
-        <a id="products-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#produtos">Produtos</a>
-        <a id="about-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#quem-somos">Quem somos?</a>
-        <a id="contact-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="#contato">Contato</a>
-        <a id="contact-link" class="text-zinc-950 active:text-orange-500 leading-[80px]" href="/blog/index.html">Blog</a>
-      </nav>
+      <nav id="desktop-nav" class="hidden md:flex flex-row items-center gap-[12px]"></nav>
     </div>
   </header>
 
@@ -313,13 +305,5 @@
   <script src="./js/header.js"></script>
   <script src="./js/carousel.js"></script>
   <script src="./js/sidebar.js"></script>
-  <script>
-        const btn = document.getElementById('menu-btn');
-        const sidebar = document.getElementById('sidebar');
-
-        btn.addEventListener('click', () => {
-            sidebar.classList.toggle('-translate-x-full');
-        });
-  </script>
 </body>
 </html>
