@@ -14,7 +14,7 @@ function render() {
       contentBody += `<a href="${post.url}" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-2">`
       contentBody += `
         <img 
-          class="size-64 md:size-48 lg:size-56 xl:size-64" 
+          class="w-full h-48 object-cover" 
           src="${post.thumbnail === null ? '../assets/image-not-found.png' : post.thumbnail}" 
           alt="Imagem do post"
       >`

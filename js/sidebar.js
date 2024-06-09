@@ -7,3 +7,7 @@ function closeSidebar() {
 function openSidebar() {
   sidebar.classList.remove('hidden')
 }
+
+addEventListener('scroll', () => {
+  closeSidebar()
+})

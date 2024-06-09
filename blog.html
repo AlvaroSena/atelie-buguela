@@ -14,7 +14,7 @@
         <img class="size-[50px] " src="./assets/logo.png" alt="Logo Atelie Buguela">
 
         <button onclick="closeSidebar()">
-          <svg class="size-6" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px">
+          <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
             <path d="M 39.486328 6.9785156 A 1.50015 1.50015 0 0 0 38.439453 7.4394531 L 24 21.878906 L 9.5605469 7.4394531 A 1.50015 1.50015 0 0 0 8.484375 6.984375 A 1.50015 1.50015 0 0 0 7.4394531 9.5605469 L 21.878906 24 L 7.4394531 38.439453 A 1.50015 1.50015 0 1 0 9.5605469 40.560547 L 24 26.121094 L 38.439453 40.560547 A 1.50015 1.50015 0 1 0 40.560547 38.439453 L 26.121094 24 L 40.560547 9.5605469 A 1.50015 1.50015 0 0 0 39.486328 6.9785156 z"/>
           </svg>
         </button>
@@ -22,10 +22,10 @@
 
       <div class="mt-8"> 
         <nav class="flex flex-col">
-          <a class="py-2 text-zinc-950" href="#main-header">Início</a>
-          <a class="py-2 text-zinc-950" href="#produtos">Produtos</a>
-          <a class="py-2 text-zinc-950" href="#quem-somos">Quem somos?</a>
-          <a class="py-2 text-zinc-950" href="#contato">Contato</a>
+          <a class="py-2 text-zinc-950" href="/">Início</a>
+          <a class="py-2 text-zinc-950" href="/#produtos">Produtos</a>
+          <a class="py-2 text-zinc-950" href="/#quem-somos">Quem somos?</a>
+          <a class="py-2 text-zinc-950" href="/#contato">Contato</a>
           <a class="py-2 text-zinc-950" href="/blog.html">Blog</a>
         </nav>
       </div>
@@ -54,12 +54,12 @@
     </div>
   </header>
 
-  <section>
+  <section class="px-4">
     <main class="max-w-[1120px] mx-4 md:mx-auto pt-[112px]">
       <h1 class="text-2xl md:text-5xl font-bold text-center text-zinc-900">Últimas publicações</h1>
 
       <div id="loading"></div>
-      <div id="posts" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8"></div>
+      <div id="posts" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-8"></div>
 
       <a href="" class="animate-bounce w-[76px] h-[76px] bg-[#25D366] fixed bottom-4 right-4 flex items-center justify-center rounded-full hover:bg-green-400 transition">
         <div class="relative">

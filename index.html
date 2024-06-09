@@ -8,7 +8,7 @@
   <title>Atêlie Buguela</title>
 </head>
 <body class="bg-zinc-50">
-  <header id="main-header" class="w-full h-[80px] fixed z-20 transition">
+  <header id="main-header" class="md:px-4 w-full h-[80px] fixed z-20 transition">
     <div id="sidebar" class="hidden transition fixed z-20 w-full h-screen bg-white p-4">
       <div class="flex flex-row items-center justify-between">
         <img class="size-[50px] " src="./assets/logo.png" alt="Logo Atelie Buguela">
@@ -22,7 +22,7 @@
 
       <div class="mt-8"> 
         <nav class="flex flex-col">
-          <a class="py-2 visited:text-orange-500 font-semibold" href="#main-header">Início</a>
+          <a class="py-2 visited:text-orange-500 font-semibold" href="/">Início</a>
           <a class="py-2 text-zinc-950" href="#produtos">Produtos</a>
           <a class="py-2 text-zinc-950" href="#quem-somos">Quem somos?</a>
           <a class="py-2 text-zinc-950" href="#contato">Contato</a>
@@ -55,7 +55,7 @@
   </header>
 
   <main>
-    <section id="home" class="h-[600px]">
+    <section id="home" class="md:px-4 h-[600px]">
       <div class="bounce-once max-w-[1120px] mx-auto h-[80px] flex flex-row justify-between">
         <div class="mt-[112px] p-4 md:p-0 absolute md:relative z-10">
           <h1 class="text-4xl md:text-5xl leading-normal md:leading-normal font-bold text-white md:text-orange-500">
@@ -78,7 +78,7 @@
       </div>
     </section>
 
-    <section id="produtos">
+    <section id="produtos" class="px-4">
       <div class="max-w-[1120px] mx-auto relative p-4 md:p-0">
         <h2 class="text-zinc-900 text-3xl font-bold">Produtos em destaque</h2>
 
@@ -176,9 +176,9 @@
       </div>
     </section>
 
-    <section id="quem-somos" class="mt-[80px] bg-zinc-200">
+    <section id="quem-somos" class="px-4 mt-[80px] bg-zinc-200">
       <div class="max-w-[1120px] mx-auto flex flex-col md:flex-row gap-0 md:gap-8">
-        <img class="p-4 md:p-0 max-w-[480px] max-h-[600px]" src="./assets/anna-bio.png" alt="Anna Buguela">
+        <img class="p-4 md:p-0 w-full md:max-w-[480px] md:max-h-[600px]" src="./assets/anna-bio.png" alt="Anna Buguela">
 
         <div class="md:my-8 p-4 md:p-0">
           <h3 class="text-2xl md:text-4xl text-orange-500 font-bold">Quem somos?</h3>
@@ -188,7 +188,7 @@
         </div>
       </div>
     </section>
-    <section id="contato" class="bg-orange-500">
+    <section id="contato" class="px-4 bg-orange-500">
       <div class="max-w-[1120px] p-4 md:p-0 md:py-8 mx-auto flex flex-col md:flex-row gap-0 md:gap-8">
         <div class="w-full md:w-[50%]">
           <h3 class="text-2xl md:text-4xl text-white font-bold">Contate-nos</h3>
@@ -229,7 +229,7 @@
     </section>
   </main>
 
-  <footer class="mt-[200px] bg-zinc-900">
+  <footer class="px-4 mt-[200px] bg-zinc-900">
     <div class="py-8 px-4 md:px-0 max-w-[1120px] mx-auto flex flex-col gap-10">
       <div class="flex flex-col gap-8 md:gap-0 md:flex-row justify-between">
         <div class="md:max-w-[50%]">
