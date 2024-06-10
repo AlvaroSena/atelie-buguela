@@ -1,25 +1,27 @@
+const prodPathname = 'atelie-buguela'
+
 function render() {
   const pathname = window.location.pathname + window.location.hash
 
   const links = [
     {
       id: 'home-link',
-      href: pathname.includes('atelie-buguela') ? '/atelie-buguela' : '/',
+      href: pathname.includes(prodPathname) ? '/atelie-buguela' : '/',
       content: 'Início',
     },
     {
       id: 'products-link',
-      href: pathname.includes('atelie-buguela') ? '/atelie-buguela/#produtos' : '/#produtos', 
+      href: pathname.includes(prodPathname) ? '/atelie-buguela/#produtos' : '/#produtos', 
       content: 'Produtos',
     },
     {
       id: 'about-link',
-      href: pathname.includes('atelie-buguela') ? '/atelie-buguela/#quem-somos' : '/#quem-somos',
+      href: pathname.includes(prodPathname) ? '/atelie-buguela/#quem-somos' : '/#quem-somos',
       content: 'Quem somos?',
     },
     {
       id: 'contact-link',
-      href:  pathname.includes('atelie-buguela') ? '/atelie-buguela/#contato' : '/#contato',
+      href:  pathname.includes(prodPathname) ? '/atelie-buguela/#contato' : '/#contato',
       content: 'Contato',
     },
     {
@@ -32,8 +34,6 @@ function render() {
   let contentBody = ''
 
   links.forEach(link => {
-    console.log(link)
-
     contentBody += `
       <a 
         id="${link.id}"
@@ -46,20 +46,12 @@ function render() {
   })
 
   document.getElementById('desktop-nav').innerHTML = contentBody
+  document.getElementById('mobile-nav').innerHTML = contentBody
 }
 
 render()
 
-window.addEventListener('scroll', () => {
-  const header = document.getElementById('main-header')
-  if (window.scrollY > 0) {
-    header.classList.add('bg-white')
-  } else {
-    header.classList.remove('bg-white')
-  }
-})
-
-document.addEventListener('DOMContentLoaded', () => {
+function toogleSection() {
   const links = document.querySelectorAll('nav a')
   let currentPath = window.location.pathname + window.location.hash
 
@@ -71,4 +63,19 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.remove('text-orange-500', 'font-semibold')
     }
   })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  toogleSection()
+})
+
+window.addEventListener('scroll', () => {
+  toogleSection()
+
+  const header = document.getElementById('main-header')
+  if (window.scrollY > 0) {
+    header.classList.add('bg-white')
+  } else {
+    header.classList.remove('bg-white')
+  }
 })

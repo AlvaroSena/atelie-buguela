@@ -21,13 +21,7 @@
       </div>
 
       <div class="mt-8"> 
-        <nav class="flex flex-col">
-          <a class="py-2 visited:text-orange-500 font-semibold" href="/">Início</a>
-          <a class="py-2 text-zinc-950" href="#produtos">Produtos</a>
-          <a class="py-2 text-zinc-950" href="#quem-somos">Quem somos?</a>
-          <a class="py-2 text-zinc-950" href="#contato">Contato</a>
-          <a class="py-2 text-zinc-950" href="/blog/index.html">Blog</a>
-        </nav>
+        <nav id="mobile-nav" class="flex flex-col"></nav>
       </div>
     </div>
 
@@ -206,7 +200,7 @@
             required
           >
           <input type="hidden" name="replyTo" value="@">
-          <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/success/index.html">
+          <input id="redirect-form" type="hidden" name="redirectTo" value="http://127.0.0.1:5500/success/index.html">
           <textarea name="message" class="resize-none p-2 rounded-md bg-white" placeholder="Escreva aqui" required></textarea>
           <input type="text" name="honeypot" style="display:none">
           <input type="hidden" name="accessKey" value="7c40e239-5ebd-4687-b4df-31a72e4da7c1">
@@ -305,5 +299,6 @@
   <script src="./js/header.js"></script>
   <script src="./js/carousel.js"></script>
   <script src="./js/sidebar.js"></script>
+  <script src="./js/form.js"></script>
 </body>
 </html>
