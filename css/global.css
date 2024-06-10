@@ -8,6 +8,11 @@
 
 html {
   scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
 }
 
 .sidebar-hidden {
