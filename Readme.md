@@ -1,7 +1,7 @@
 <img src="./assets/banner.png" alt="VsCode aberto na aba de extensões">
 
 # Buguela Ateliê
-Projeto desenvolvido
+Repositório destinado ao projeto multidisciplinar do primeiro semestre curso de Desenvolvimento de Software
 
 ## 👨‍💻 Executando
 ### Para instalar em sua máquina execute:
