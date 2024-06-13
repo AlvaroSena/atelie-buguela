@@ -3,7 +3,7 @@ const prodPathname = 'atelie-buguela'
 function render() {
   const pathname = window.location.pathname + window.location.hash
 
-  const links = [
+  const linksArray = [
     {
       id: 'home-link',
       href: pathname.includes(prodPathname) ? '/atelie-buguela' : '/',
@@ -33,7 +33,7 @@ function render() {
 
   let contentBody = ''
 
-  links.forEach(link => {
+  linksArray.forEach(link => {
     contentBody += `
       <a 
         id="${link.id}"
